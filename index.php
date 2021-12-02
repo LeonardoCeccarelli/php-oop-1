@@ -1,7 +1,17 @@
 <?php
-include "classes/Movie.php";
+require_once "classes/Movie.php";
 
-$movie1 = new Movie(100)
+// Istanza primo film
+$movieMarvel = new Movie(124);
+$movieMarvel->setTitle("Captain America - il primo Vendicatore");
+$movieMarvel->setOriginalTitle("The First Avenger: Captain America");
+$movieMarvel->setGenre("Azione");
+
+// Istanza secondo film
+$movieDc = new Movie(98);
+$movieDc->setTitle("Flash");
+$movieDc->setOriginalTitle("FLASH");
+$movieDc->setGenre("Fantasceinza");
 
 ?>
 
@@ -12,11 +22,29 @@ $movie1 = new Movie(100)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link Mio CSS -->
+    <link rel="stylesheet" href="styles/main.css">
+
     <title>Movie - PHP</title>
 </head>
 
 <body>
-    <?php var_dump($movie1) ?>
+    <main>
+        <div class="card_container">
+            <div class="single_card">
+                <h3><?php echo $movieMarvel->getAllTitles() ?></h3>
+                <h4>Genere: <?php echo $movieMarvel->getGenre() ?></h4>
+                <h4>Durata: <?php echo $movieMarvel->getMinutes() ?></h4>
+            </div>
+
+            <div class="single_card">
+                <h3><?php echo $movieDc->getAllTitles() ?></h3>
+                <h4>Genere: <?php echo $movieDc->getGenre() ?></h4>
+                <h4>Durata: <?php echo $movieDc->getMinutes() ?></h4>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
