@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+.card_container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.single_card {
+    margin: 50px;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 30px;
+    background-color: lightgrey;
+    box-shadow: 0 0 15px 0 black;
+}
+
+.single_card h3 {
+    margin-bottom: 25px;
+}
+
+.single_card h4 {
+    margin-bottom: 15px;
+}
+
+.single_card h4:last-child {
+    margin-bottom: 0;
+}
