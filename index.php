@@ -1,5 +1,7 @@
 <?php
-include "classes/Movie.php"
+include "classes/Movie.php";
+
+$movie1 = new Movie(100)
 
 ?>
 
@@ -14,7 +16,7 @@ include "classes/Movie.php"
 </head>
 
 <body>
-
+    <?php var_dump($movie1) ?>
 </body>
 
 </html>
