@@ -62,6 +62,18 @@ class Movie
 
     public function getMinutes()
     {
-        return $this->minutes;
+        return $this->minutes . "min";
+    }
+
+    //********************************************************************
+    // Funzioni VARIE
+    public function getAllTitles()
+    {
+        if (strtolower($this->title) === strtolower($this->originalTitle)) {
+            echo $this->title;
+            return;
+        }
+
+        echo $this->title . " (" . $this->originalTitle . ")";
     }
 }
